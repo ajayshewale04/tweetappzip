@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "59080cfd-77d4-4a1e-94fa-6dd94701dfb8",
+		"name": "pension-mgmt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8081/login",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"admin1\",\r\n  \"password\": \"adminpass@1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/validate",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTI5NTAwMDgsInN1YiI6ImFkbWluMSIsImV4cCI6MTY1Mjk1MDkwOH0.0sWpJpgT3hHZx37n2QMb_MV9ytJKp0HS8bYolUkZcl8",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/validate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"validate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/statusCheck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/statusCheck",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"statusCheck"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8083/pensionerDetailByAadhaar/123456789012",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/pensionerDetailByAadhaar/123456789012",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"pensionerDetailByAadhaar",
+						"123456789012"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/pensionerInput",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTI5NTAwMDgsInN1YiI6ImFkbWluMSIsImV4cCI6MTY1Mjk1MDkwOH0.0sWpJpgT3hHZx37n2QMb_MV9ytJKp0HS8bYolUkZcl8",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"aadhaarNumber\": \"123456789012\",\r\n    \"dateOfBirth\": \"1956-09-12\",\r\n    \"name\": \"Achyuth\",\r\n    \"pan\": \"BHMER12436\",\r\n    \"pensionType\": \"self\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/pensionerInput",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"pensionerInput"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/processPension",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eXQiOjE2NTI5NTAwMDgsInN1YiI6ImFkbWluMSIsImV4cCI6MTY1Mjk1MDkwOH0.0sWpJpgT3hHZx37n2QMb_MV9ytJKp0HS8bYolUkZcl8",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"aadhaarNumber\":\"123456789012\",\"pensionAmount\":31600,\"bankServiceCharge\":550}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/processPension",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"processPension"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
